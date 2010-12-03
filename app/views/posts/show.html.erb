@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @post.body %>
+</p>
+
+<p>
+  <b>Posted by:</b>
+  <%= @post.user.email %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <ul>
+    <%@post.comments.each do |comment| %>
+      <li>
+      <%= h comment.body %>
+      <span style="float:right;">
+        <b> Commented by: </b><%= comment.user.email %>
+      </span>  
+      </li><br/>
+    <% end %>
+  </ul>  
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %> | 
+<%= link_to 'Add comment', "javascript::void(0);", :onclick => "$('add_comment').toggle();" %>
+
+<div id="add_comment" style="display:none;">
+  <%= render :partial => "comment_form" %>
+</div>

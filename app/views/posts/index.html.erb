@@ -1,0 +1,21 @@
+<h1>Listing posts</h1>
+
+<% @posts.each do |post| %>
+  <%if post.id%2 == 0%>
+    <div style="padding:10px;background-color:lightgray;">
+  <%else%>
+    <div style="padding:10px;background-color:lightblue;">
+  <%end%>
+    <div><span><b>Title: </b></span><span><%= post.title %></span></div>
+    <div style="margin-top:5px;"><%= post.body %></div>
+    <div>
+    <%= link_to 'Show', post %> | 
+    <%= link_to 'Edit', edit_post_path(post) %> | 
+    <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  </div>
+<% end %>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>

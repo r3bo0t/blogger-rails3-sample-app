@@ -1,0 +1,11 @@
+<%= form_for(:comment, :url => post_comments_path(@post)) do |f| %>
+  
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
