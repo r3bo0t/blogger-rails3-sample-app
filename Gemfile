@@ -1,7 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.0.rc2'
-
+gem 'nokogiri'
+gem 'hpricot'
+gem 'event-calendar', :require => 'event_calendar'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

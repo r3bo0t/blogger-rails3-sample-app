@@ -37,6 +37,8 @@ GEM
       warden (~> 1.0.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    event-calendar (2.3.2)
+    hpricot (0.8.2)
     i18n (0.4.2)
     mail (2.2.10)
       activesupport (>= 2.3.6)
@@ -45,6 +47,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mysql (2.8.1)
+    nokogiri (1.4.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -78,6 +81,9 @@ PLATFORMS
 
 DEPENDENCIES
   devise (= 1.1.5)
+  event-calendar
+  hpricot
   mysql (= 2.8.1)
+  nokogiri
   rails (= 3.0.0.rc2)
   sqlite3-ruby
